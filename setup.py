@@ -7,7 +7,7 @@ with open("README.md") as fp:
 
 setuptools.setup(
     name="url_shortener",
-    version="0.0.1",
+    version="0.1.0",
 
     description="An empty CDK Python app",
     long_description=long_description,
@@ -28,7 +28,7 @@ setuptools.setup(
         "cdk-watchful",
     ],
 
-    python_requires=">=3.6",
+    python_requires=">=3.7",
 
     classifiers=[
         "Development Status :: 4 - Beta",
