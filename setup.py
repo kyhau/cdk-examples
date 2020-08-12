@@ -9,7 +9,7 @@ setuptools.setup(
     name="url_shortener",
     version="0.1.0",
 
-    description="An empty CDK Python app",
+    description="A CDK Python app",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
@@ -32,20 +32,14 @@ setuptools.setup(
 
     classifiers=[
         "Development Status :: 4 - Beta",
-
         "Intended Audience :: Developers",
-
         "License :: OSI Approved :: Apache Software License",
-
         "Programming Language :: JavaScript",
         "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
-
         "Topic :: Software Development :: Code Generators",
         "Topic :: Utilities",
-
         "Typing :: Typed",
     ],
 )

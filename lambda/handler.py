@@ -4,8 +4,10 @@ import logging
 import os
 import uuid
 
+
 LOG = logging.getLogger()
 LOG.setLevel(logging.INFO)
+LOG.info(f'boto3.__version__: {boto3.__version__}')
 
 
 def main(event, context):

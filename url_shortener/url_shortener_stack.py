@@ -42,7 +42,7 @@ class UrlShortenerStack(Stack):
         
         api = aws_apigateway.LambdaRestApi(self, "UrlShortenerApi", handler=function)
         
-        wf = Watchful(self, "watchful", alarm_email=ALERT_EMAIL)
+        wf = Watchful(self, "UrlShortenerWatchful", alarm_email=ALERT_EMAIL)
         wf.watch_scope(self)
         
         CfnOutput(self, "UrlShortenerApiUrl", value=api.url, export_name="UrlShortenerApiUrl")
