@@ -6,7 +6,7 @@
 This repository contains some AWS CDK projects implemented for demo.
 
 - See [kyhau/cdk-examples/CDK/](https://github.com/kyhau/cdk-examples/tree/master/CDK) for some helper scripts to install CDK and set up dev environment.
-- See [kyhau/cdk-examples/#cdk](https://github.com/kyhau/cdk-examples/#cdk) for some useful CDK resources.
+- See [kyhau/aws-tools/#cdk](https://github.com/kyhau/aws-tools/#cdk) for some useful CDK resources.
 - See also [Translating TypeScript AWS CDK code to other languages](https://docs.aws.amazon.com/cdk/latest/guide/multiple_languages.html) (JavaScript, Python, Java, C#).
 
 ---
