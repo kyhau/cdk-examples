@@ -3,14 +3,15 @@ import json
 import os
 from os.path import abspath, dirname
 
-from aws_cdk import aws_events, aws_events_targets, aws_iam, aws_lambda, core
-from aws_cdk.core import App, Environment
+from aws_cdk import (App, Duration, Environment, Stack, aws_events,
+                     aws_events_targets, aws_iam, aws_lambda)
+from constructs import Construct
 
 lambda_dir = dirname(abspath(__file__))
 
 
-class CdkSetCwLoggroupRetentionStack(core.Stack):
-    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+class CdkSetCwLoggroupRetentionStack(Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
         function_name = "SetCwLoggroupRetention"
         custom_role = CdkSetCwLoggroupRetentionStack.create_role(self, f"{function_name}-ExecutionRole")
@@ -22,15 +23,17 @@ class CdkSetCwLoggroupRetentionStack(core.Stack):
         lambda_role: aws_iam.Role = aws_iam.Role(
             self, "lambda_main_role",
             assumed_by=aws_iam.ServicePrincipal("lambda.amazonaws.com"),
-            inline_policies =[
-                aws_iam.PolicyStatement(
-                    actions=[
-                        "logs:DescribeLogGroups",
-                        "logs:PutRetentionPolicy",
-                    ],
-                    effect=aws_iam.Effect.ALLOW,
-                    resources=["*"],
-                )
+            inline_policies = [
+                aws_iam.PolicyDocument(statements=[
+                    aws_iam.PolicyStatement(
+                        actions=[
+                            "logs:DescribeLogGroups",
+                            "logs:PutRetentionPolicy",
+                        ],
+                        effect=aws_iam.Effect.ALLOW,
+                        resources=["*"],
+                    )
+                ])
             ],
             managed_policies=[
                 aws_iam.ManagedPolicy.from_aws_managed_policy_name("AWSLambdaReadOnlyAccess"),
@@ -48,7 +51,7 @@ class CdkSetCwLoggroupRetentionStack(core.Stack):
             handler="lambda_function.lambda_handler",
             role=custom_role,
             runtime=aws_lambda.Runtime.PYTHON_3_8,
-            timeout= core.Duration.seconds(300),
+            timeout= Duration.seconds(300),
         )
         return lambda_function
 

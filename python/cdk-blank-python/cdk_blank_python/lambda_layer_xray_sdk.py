@@ -1,12 +1,11 @@
-from aws_cdk import (
-    aws_lambda as _lambda,
-    aws_iam as _iam,
-    core,
-)
+from aws_cdk import Stack
+from aws_cdk import aws_iam as _iam
+from aws_cdk import aws_lambda as _lambda
+from constructs import Construct
 
 
-class CdkBlankPythonStack(core.Stack):
-    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+class CdkBlankPythonStack(Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
         function_name = "BlankPythonCdkDemo"
         custom_role: _iam.Role = CdkBlankPythonStack.create_role(self, f"{function_name}Role")

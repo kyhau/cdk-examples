@@ -11,13 +11,19 @@ Project structure
 - [tests/](tests)  contains test data and scrtpts to run unit tests and lambda test
 
 
+Install CDK v2
+```
+npm install -g aws-cdk@next
+```
+
 Steps
 ```bash
+
 pip install -r requirements.txt
 
-pushd tests
+cd tests
 ./run_unittests.sh
-popd
+cd -
 
 ./build_layer.sh
 
@@ -27,7 +33,7 @@ cdk synth
 
 cdk deploy
 
-pushd tests/
+cd tests/
 ./test_lambda.sh
-popd
+cd -
 ```

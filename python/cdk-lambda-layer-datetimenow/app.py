@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import json
 import os
-from aws_cdk.core import App, Environment
-from cdk_layer_datetimenow.lambda_layer import LayerDateTimeNowStack
 
+from aws_cdk import App, Environment
+
+from cdk_layer_datetimenow.lambda_layer import LayerDateTimeNowStack
 
 env_file = os.environ.get("ENV_FILE", "env_dev.json")
 with open(env_file) as json_file:

@@ -3,7 +3,6 @@ import setuptools
 #with open("README.md") as fp:
 #    long_description = fp.read()
 
-
 setuptools.setup(
     name="cdk_set_cw_loggroup_retention",
     version="0.1.0",
@@ -18,11 +17,8 @@ setuptools.setup(
     packages=setuptools.find_packages(where="cdk_set_cw_loggroup_retention"),
 
     install_requires=[
-        "aws-cdk.core",
-        "aws-cdk.aws-events",
-        "aws-cdk.aws-events-targets",
-        "aws-cdk.aws-lambda",
-        "aws-cdk.aws-iam",
+        "aws-cdk-lib>=2.0.0rc1",
+        "constructs>=10.0.0",
     ],
 
     python_requires=">=3.7",

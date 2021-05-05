@@ -1,6 +1,5 @@
 import setuptools
 
-
 with open("README.md") as fp:
     long_description = fp.read()
 
@@ -19,8 +18,8 @@ setuptools.setup(
     packages=setuptools.find_packages(where="cdk_layer_datetimenow"),
 
     install_requires=[
-        "aws-cdk.core",
-        "aws-cdk.aws-lambda",
+        "aws-cdk-lib>=2.0.0rc1",
+        "constructs>=10.0.0",
     ],
 
     python_requires=">=3.7",

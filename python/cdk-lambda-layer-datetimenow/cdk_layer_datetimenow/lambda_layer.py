@@ -1,11 +1,10 @@
-from aws_cdk import (
-    aws_lambda as _lambda,
-    core,
-)
+from aws_cdk import Stack
+from aws_cdk import aws_lambda as _lambda
+from constructs import Construct
 
 
-class LayerDateTimeNowStack(core.Stack):
-    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+class LayerDateTimeNowStack(Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
         test_lambda : _lambda.Function = LayerDateTimeNowStack.create_lambda(self)
 
