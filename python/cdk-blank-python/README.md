@@ -10,15 +10,12 @@ Project structure
 - [layer/](layer)  contains what to be built and packaged for the Layer
 - [tests/](tests)  contains test data and scrtpts to run unit tests and lambda test
 
+Prerequisites
+1. Install CDK v2: `npm install -g aws-cdk@next`
+2. Update env_dev.json
 
-Install CDK v2
-```
-npm install -g aws-cdk@next
-```
-
-Steps
+Build and Deploy
 ```bash
-
 pip install -r requirements.txt
 
 cd tests

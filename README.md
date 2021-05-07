@@ -20,8 +20,8 @@ npm install -g aws-cdk@next
 
 | Example | Description |
 | :--- | :--- |
-| [cdk-blank-python](python/cdk-blank-python) | Deploy [blank_python](https://github.com/awsdocs/aws-lambda-developer-guide/tree/master/sample-apps/blank-python) (aws-xray-sdk with a Lambda layer and a dummy Lambda function using the layer) with CDK v2 and unit tests |
-| [cdk-lambda-layer-datetimenow](python/cdk-lambda-layer-datetimenow) | Deploy a Lambda layer and a dummy Lambda function using the layer, with CDK v2 and invoke-lambda test |
-| [cdk-lambda-set-cloudwatch-loggroup-retention/](cdk-lambda-set-cloudwatch-loggroup-retention/) | Deploy a Lambda functin and event rule to set CW loggroups retention |
-| [cdk-url-shortener](python/cdk-url-shortener) | Deploy the URL Shortener illustrated in the [AWS Online Tech Talk - Infrastructure is Code with the AWS CDK](https://www.youtube.com/watch?v=ZWCvNFUN-sU) |
-| [kyhau/have-a-smile](https://github.com/kyhau/have-a-smile) | Deploy a Lambda function that calls APIs of DevOps Reactions, Dilbert and xkcd |
+| [cdk-blank-python](python/cdk-blank-python) (CDK v2) | Deploy [blank_python](https://github.com/awsdocs/aws-lambda-developer-guide/tree/master/sample-apps/blank-python) (aws-xray-sdk with a Lambda layer and a dummy Lambda function using the layer), include unit tests and invoke-lambda test. |
+| [cdk-lambda-layer-datetimenow](python/cdk-lambda-layer-datetimenow) (CDK v2) | Deploy a Lambda layer and a dummy Lambda function using the layer, include invoke-lambda test. |
+| [cdk-lambda-set-cloudwatch-loggroup-retention/](cdk-lambda-set-cloudwatch-loggroup-retention/) (CDK v2) | Deploy a Lambda functin and event rule to set CW loggroups retention, include invoke-lambda test. |
+| [cdk-url-shortener](python/cdk-url-shortener) (CDK v1) | Deploy the URL Shortener illustrated in the [AWS Online Tech Talk - Infrastructure is Code with the AWS CDK](https://www.youtube.com/watch?v=ZWCvNFUN-sU). |
+| [kyhau/have-a-smile](https://github.com/kyhau/have-a-smile) (CDK v1) | Deploy a Lambda function that calls APIs of DevOps Reactions, Dilbert and xkcd. |

@@ -1,5 +1,2 @@
-aws-cdk.core
-aws-cdk.aws-events
-aws-cdk.aws-events-targets
-aws-cdk.aws-lambda
-aws-cdk.aws-iam
+aws-cdk-lib>=2.0.0rc1
+constructs>=10.0.0

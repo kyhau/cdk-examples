@@ -9,12 +9,11 @@ Project structure
 - [layer/](layer) contains what to be built and packaged for the Layer
 - test_lambda.sh tests the lambda function after deployment
 
-Install CDK v2
-```
-npm install -g aws-cdk@next
-```
+Prerequisites
+1. Install CDK v2: `npm install -g aws-cdk@next`
+2. Update env_dev.json
 
-Steps
+Build and Deploy
 ```bash
 pip install -r requirements.txt
 cdk ls
