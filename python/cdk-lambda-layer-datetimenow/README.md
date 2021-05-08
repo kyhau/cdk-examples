@@ -2,24 +2,29 @@
 
 This is a simple example to show how to deploy Lambda Layer with CDK.
 
-Project structure
+## Project structure
 - app.py
 - [cdk_layer_datetimenow/](cdk_layer_datetimenow) contains the CDK app
 - [function/](function) contains the lambda function
 - [layer/](layer) contains what to be built and packaged for the Layer
 - test_lambda.sh tests the lambda function after deployment
 
-Prerequisites
+## Prerequisites
 1. Install CDK v2: `npm install -g aws-cdk@next`
 2. Update env_dev.json
 
-Build and Deploy
+## Build and Deploy
 ```bash
+# Create and activate virtual env
 pip install -r requirements.txt
 cdk ls
 cdk synth
 cdk deploy
+
+# Testing
 ./test_lambda.sh
+
+rm -rf cdk.out package */__pycache__ */*.egg-info out.json
 ```
 
 References:

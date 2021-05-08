@@ -2,7 +2,7 @@
 
 This repo shows how to deploy [blank_python](https://github.com/awsdocs/aws-lambda-developer-guide/tree/master/sample-apps/blank-python) with CDK.
 
-Project structure
+## Project structure
 - app.py
 - build_layer.sh, build and package the Layer.
 - [cdk_blank_python/](cdk_blank_python) contain the CDK app
@@ -10,12 +10,14 @@ Project structure
 - [layer/](layer)  contains what to be built and packaged for the Layer
 - [tests/](tests)  contains test data and scrtpts to run unit tests and lambda test
 
-Prerequisites
+## Prerequisites
 1. Install CDK v2: `npm install -g aws-cdk@next`
 2. Update env_dev.json
 
-Build and Deploy
+## Build and Deploy
 ```bash
+# Create and activate virtual env
+
 pip install -r requirements.txt
 
 cd tests
@@ -33,4 +35,6 @@ cdk deploy
 cd tests/
 ./test_lambda.sh
 cd -
+
+rm -rf cdk.out package */__pycache__ */*.egg-info */out.json
 ```
