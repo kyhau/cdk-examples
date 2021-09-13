@@ -25,3 +25,4 @@ npm install -g aws-cdk@next
 | [cdk-lambda-set-cloudwatch-loggroup-retention/](cdk-lambda-set-cloudwatch-loggroup-retention/) (CDK v2) | Deploy a Lambda functin and event rule to set CW loggroups retention, include invoke-lambda test. |
 | [cdk-url-shortener](python/cdk-url-shortener) (CDK v1) | Deploy the URL Shortener illustrated in the [AWS Online Tech Talk - Infrastructure is Code with the AWS CDK](https://www.youtube.com/watch?v=ZWCvNFUN-sU). |
 | [kyhau/have-a-smile](https://github.com/kyhau/have-a-smile) (CDK v1) | Deploy a Lambda function that calls APIs of DevOps Reactions, Dilbert and xkcd. |
+| [kyhau/slack-command-app-cdk](https://github.com/kyhau/slack-command-app-cdk) (CDK v2) | Deploy a Slack App/Bot with AWS API Gateway and Lambda Functions |
