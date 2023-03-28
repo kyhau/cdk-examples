@@ -26,25 +26,25 @@ class UrlShortenerStack(Stack):
         table = aws_dynamodb.Table(
             self, "ShortCodeMappingTable",
             partition_key=aws_dynamodb.Attribute(name="id", type=aws_dynamodb.AttributeType.STRING))
-        
+
         function = aws_lambda.Function(
             self, "UrlShortenerFunction",
             code=aws_lambda.Code.asset("./lambda"),
             handler="handler.main",
             timeout=Duration.minutes(5),
-            runtime=aws_lambda.Runtime.PYTHON_3_8,
+            runtime=aws_lambda.Runtime.PYTHON_3_9,
             tracing=aws_lambda.Tracing.ACTIVE,
         )
-        
+
         table.grant_read_write_data(function)
-        
+
         function.add_environment("TABLE_NAME", table.table_name)
-        
+
         api = aws_apigateway.LambdaRestApi(self, "UrlShortenerApi", handler=function)
-        
+
         wf = Watchful(self, "UrlShortenerWatchful", alarm_email=ALERT_EMAIL)
         wf.watch_scope(self)
-        
+
         CfnOutput(self, "UrlShortenerApiUrl", value=api.url, export_name="UrlShortenerApiUrl")
 
 

@@ -50,7 +50,7 @@ class CdkBlankPythonStack(Stack):
             function_name=function_name,
             handler="lambda_function.lambda_handler",
             role=custom_role,
-            runtime=aws_lambda.Runtime.PYTHON_3_8,
+            runtime=aws_lambda.Runtime.PYTHON_3_9,
             timeout= Duration.seconds(300),
         )
 

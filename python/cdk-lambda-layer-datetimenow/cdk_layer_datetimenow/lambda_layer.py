@@ -14,7 +14,7 @@ class LayerDateTimeNowStack(Stack):
             self, "test_lambda",
             function_name="TestLambdaLayerDateTimeNow",
             handler="TestLambdaLayerDateTimeNow.lambda_handler",
-            runtime=_lambda.Runtime.PYTHON_3_8,
+            runtime=_lambda.Runtime.PYTHON_3_9,
             code=_lambda.Code.from_asset("function"),
         )
 
